@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="output">
+                <p class="top"></p>
+                <p class="down"></p>
+            </div>
+            <div>
+                <ul>
+                    <li><button onclick="cal(innerText)">7</button></li>
+                    <li><button onclick="cal(innerText)">8</button></li>
+                    <li><button onclick="cal(innerText)">9</button></li>
+                    <li><button onclick="cal(innerText)">*</button></li>
+                </ul>
+                <ul>
+                    <li><button onclick="cal(innerText)">4</button></li>
+                    <li><button onclick="cal(innerText)">5</button></li>
+                    <li><button onclick="cal(innerText)">6</button></li>
+                    <li><button onclick="cal(innerText)">-</button></li>
+                </ul>
+                <ul>
+                    <li><button onclick="cal(innerText)">1</button></li>
+                    <li><button onclick="cal(innerText)">2</button></li>
+                    <li><button onclick="cal(innerText)">3</button></li>
+                    <li><button onclick="cal(innerText)">+</button></li>
+                </ul>
+                <ul>
+                    <li><button onclick="cal(innerText)">0</button></li>
+                    <li><button onclick="cal(innerText)">%</button></li>
+                    <li><button onclick="cal(innerText)">/</button></li>
+                    <li><button class="b" onclick="result()">=</button></li>
+                </ul>
+                <ul>
+                    <li><button class="b" onclick="clea()">clear</button></li>
+                    <li><button class="b" onclick="backSpace()">back</button></li>
+
+                    <li><select onclick="cal(value)" name="inner">
+                            <option name="ab" value=""></option>
+                            <option name="ab" value="x*x">x*x</option>
+                            <option name="ab" value="lg">lg</option>
+                            <option name="ab" value="sin">sin</option>
+                            <option name="ab" value="cos">cos</option>
+                            <option name="ab" value="tan">tan</option>
+                            <option name="ab" value="sinh">sinh</option>
+                            <option name="ab" value="cosh">cosh</option>
+                            <option name="ab" value="tanh">tanh</option>
+
+                        </select></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        function cal(txt) {
+
+            document.getElementsByClassName('top')[0].innerText += txt
+
+
+        }
+        function result() {
+            var res = document.getElementsByClassName('top')[0].innerText
+            document.getElementsByClassName('down')[0].innerText = eval(res)
+        }
+        function clea() {
+
+            //var data = document.getElementsByTagName('div')[0].innerText
+            document.getElementsByClassName('output')[0].innerText = ''
+
+
+        }
+        function backSpace() {
+            var back = document.getElementsByClassName('output')[0].innerText
+            document.getElementsByClassName('output')[0].innerText = back.slice(0, -1)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
