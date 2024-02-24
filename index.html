@@ -2,68 +2,180 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- custom css file -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/91a051cf41.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-
-    <!-- header section starts -->
-
-    <header class="header">
-
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="">
-        </a>
-
-        <nav class="navbar">
-            <div id="close" class="fas fa-times"></div>
-
-            <a href="#" class="nav_item">home</a>
-            <a href="#" class="nav_item">about</a>
-            <a href="#" class="nav_item">menu</a>
-            <a href="#" class="nav_item">contact</a>
-
-        </nav>
-
-        <div id="menu" class="fas fa-bars"></div>
-
-    </header>
-
-    <!-- header section ends -->
-
-    <!-- home section starts -->
-
-    <section class="home">
-
-        <div class="content">
-            <h1 class="title">fresh <span>coffee</span> in the <span>morning</span> </h1>
-            <p class="description">1.Coffee beans are actually the seeds from the coffee plant's berry-like fruits. ... <br>
-                2.Coffee beans are green when they are picked. ... <br>
-                3.Brazil is the largest coffee producer in the world. ... <br>
-                4.Coffee was first discovered in the 15th century—with the finding credited to some energetic goats!</p>
-            <a href="#" class="btn">get started</a>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/969A8F77-06B1-4597-A4A6-F37A4664DCC3.JPEG" class="logo" />
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <!-- <li><a href="">Portfolio</a></li> -->
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hey, I'm <span>Saman</span> <br />Hakim From Pune</h1>
+            </div>
         </div>
+    </div>
+    <!-- -------------About---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/saman _image.png" alt="" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                        aspernatur, aliquam unde, sed id ad magnam sunt eos doloribus
+                        impedit distinctio a consequuntur voluptas quisquam non soluta
+                        deserunt harum et labore. Cupiditate doloribus ipsa ratione,
+                        assumenda perspiciatis ipsam optio alias.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML & CSS</span><br>Provides the basic structure of sites & CSS is used to control presentation, formatting, and layout.</li>
+                            <li><span>JavaScript</span><br>Used to control the behavior of different elements.</li>
+                            <li><span>BootStrap</span><br>Bootstrap is a free front-end framework, with the purpose of making web development faster and easier.</li>
 
-        <div class="image">
-            <img src="images/cup.jpg" alt="" data-speed="-3" class="move">
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016</span><br>SSC <br>percentage:88.20</li>
+                            <li><span>2018</span><br>HSC <br> percentage:56.62</li>
+                            <li><span>2023</span><br>B.Tech <br> percentage:69</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
+    </div>
+    </div>
+    <!-- ------------Services-------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <h2>Attendance Managment System</h2>
+                    <p>The proposed system aims to provide features such as detection
+                        and recognition of faces using Machine Learning algorithms like
+                        LBPH and Harcascade.
+                        Collect the data of the students with name and roll number for
+                        creating database. Image of the class will be taken using mobile
+                        camera. Using image, it will detect and separate the faces. Then it
+                        will calculate the features of individual. It will compare the face
+                        features from images and database, if the image gets recognised
+                        the attendance will get updated on excel sheet.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2> Calculator</h2>
+                    <p>Developed a basic calculator application using HTML, CSS, and
+                        JavaScript. Including standard calculator functions like addition,
+                        subtraction, multiplication, and division.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Weather Application</h2>
+                    <p>Developed a weather application that fetches data from a weather
+                        API and displays current weather conditions for a specific location.
+                        Used JavaScript to handle API calls and dynamic content updates.</p>
+                    <a href="">Learn more</a>
+                </div>
 
-    </section>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>samanhakim@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i></i>1234567888</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
 
-    <!-- home section ends -->
-    <!-- GSAP CDN Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+                    </div>
+                    <a href="pictures/saman_resume.pdf" download class="btn btn2">Download Resume</a>
 
-    <!-- custom js file -->
-    <script src="script.js"></script>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Saman <i class="fa-solid fa-heart"> </i>  by Saman Hakim</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
 </body>
 
 </html>
